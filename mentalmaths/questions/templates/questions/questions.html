@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mental Maths: Develop Your Mental Maths Skills!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Maths Practice!</h1>
+          <h2 class="subtitle">Develop your Mental Maths Skills!</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-3">Have a go at these questions, and then click the button for more!</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-3 has-text-centered">
+            {% for question in questions_list|slice:":5" %}
+              <p class="is-size-3 content">{{question}}</p>
+            {% endfor %}
+          </div>
+          <div class="column is-3 has-text-centered">
+            {% for question in questions_list|slice:"5:" %}
+              <p class="is-size-3 content">{{question}}</p>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="buttons is-centered">
+          <button class="button is-primary" onClick="window.location.reload();">More</button>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Maths Prep</strong> by <a href="#">Will Mead</a> and <a href="#">Nick Brown</a>.
+        </p>
+        <p>
+          <i class="far fa-copyright"></i> Copyright 2020.
+        </p>
+      </div>
+    </footer>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  </body>
+</html>
